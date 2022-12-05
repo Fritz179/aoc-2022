@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs'
 
 const input = fs.readFileSync('./input.txt', 'utf-8').split('\n')
 input.push('')
@@ -6,7 +6,7 @@ input.push('')
 let maxs = [0, 0, 0]
 
 let curr = 0
-for (element of input) {
+for (const element of input) {
   if (!element) {
     if (curr > maxs[0]) {
       maxs.shift()
